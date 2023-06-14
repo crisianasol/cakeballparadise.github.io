@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cake Ball Paradise</title>
+	<link rel="icon" type="image/x-icon" href="ckfavicon.png">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+			*{
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				list-style: none;
+				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
+
+			}
+
+			body{
+				font-family: 'Poppins', sans-serif;
+			}
+
+			nav{
+				top: 0; right: 0; left: 0;
+				background: #FFB6C1;
+				height: 8rem;
+				width: 100%;
+			}
+
+			label.name{
+				color: #900603;
+				font-size: 38px;
+				font-weight: bolder;
+				font-family: Monotype Corsiva;
+				padding-right: 3rem;
+				padding-bottom: 1rem;
+				margin-left: 1rem;
+			}
+
+			nav .logoContent {
+				display: flex;
+				align-items: center;
+			}
+
+			nav .logo img{
+				positon: absolute;
+				height: 9rem;
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+			}
+
+			nav ul li{
+				list-style: none;
+				line-height: 80px;
+				display: inline-block;
+			}
+
+
+			/*RIBBON*/
+			nav ul li a{
+				display: inline-block;
+				font-size: 25px;
+				color: 	#DC143C;
+				font-weight: 400;
+				text-decoration: none ;
+				margin-left: 50px;
+				
+			}
+
+			a.active, a:hover{
+				color: #FFFFFF;
+			}
+
+
+
+			/*CONTACT PAGE==========================================*/
+			.contact{
+				position: relative;
+				min-height: 100vh;
+				padding: 50px 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				background: url(hmcont3.jpg);
+				background-size: cover;
+			}
+
+			.contact .content{
+				max-width: 800px;
+				text-align: center;
+			}
+
+			.contact .content h2{
+				font-size: 36px;
+				font-weight: 500;
+			
+			}
+
+			.contact .content p{
+				font-weight: 300;
+				text-align: justify;
+  				text-justify: inter-word;
+  				text-align: center;
+				
+			}
+
+			.container{
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 30px;
+			}
+
+			.container .contactInfo{
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.container .contactInfo .box{
+				position: relative;
+				padding: 10px 0;
+				display: flex;
+			}
+
+			.container .contactInfo .box .icon{
+				min-width: 60px;
+				height: 60px;
+				background: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				font-size: 22px;
+			}
+
+			.container .contactInfo .box .text{
+				display: flex;
+				margin-left: 20px;
+				font-size: 16px;
+				flex-direction: column;
+				font-weight: 300;
+			}
+
+			.container .contactInfo .box .text h2{
+				font-weight: 500;
+			}
+
+			.contactForm{
+				width: 70%;
+				padding: 40px;
+				background: #fff;
+			}
+
+			.contactForm h2{
+				font-size: 30px;
+				color: #333;
+				font-weight: 500;
+			}
+
+			.contactForm .inputBox{
+				position: relative;
+				width: 100%;
+				margin-top: 10px;
+			}
+
+			.contactForm .inputBox input, .contactForm .inputBox textarea{
+				width: 100%;
+				padding: 5px 0;
+				font-size: 16px;
+				margin: 10px 0;
+				border: none;
+				border-bottom: 2px solid #333;
+				outline: none;
+				resize: none;
+			}
+
+			.contactForm .inputBox span{
+				position: absolute;
+				left: 0;
+				padding: 5px 0;
+				font-size: 16px;
+				margin: 10px 0;
+				pointer-events: none;
+				transition: .5s;
+				color: #666;
+			}
+
+			.contactForm .inputBox input:focus ~ span, 
+			.contactForm .inputBox input:valid ~ span,
+			.contactForm .inputBox textarea:focus ~ span,
+			.contactForm .inputBox textarea:valid ~ span{
+				color: #e91e63;
+				font-size: 12px;
+				transform: translateY(-20px);
+			}
+
+			.contactForm .inputBox button{
+				width: 100px;
+				background: #DC143C;
+				color: #fff;
+				border: none;
+				cursor: pointer;
+				padding: 10px;
+				font-size: 18px;
+				border-radius: 40px;
+			}
+
+			.contactForm .inputBox button:hover{
+				background: #fff;
+				color: #DC143C;
+				border: 1px solid #DC143C;
+			}
+
+
+
+			/*FOOTER DESIGN*/
+			.main{
+				display: flex;
+				flex-wrap: wrap;
+				margin-left: 10em;
+				padding: 25px;
+
+			}
+
+			.footer{
+				padding: 10px 0;
+				background-color: #FFB6C1;
+			}
+
+
+			.col{
+				width: 25%;
+			}
+
+			.col h4{
+				font-size: 1.2rem;
+				color: #DC143C;
+				margin-bottom: 25px;
+				position: relative;
+			}
+
+			.col h4::before{
+				content: "";
+				position: absolute;
+				height: 2px;
+				width: 50px;
+				left: 0;
+				bottom: -8px;
+				background: #fff;
+			}
+
+			.col ul li:not(last-child){
+				margin-bottom: 15px;
+			}
+
+			.col ul li a{
+				color: #DC143C;
+				font-size: 1.1rem;
+				display: block;
+				text-transform: capitalize;
+				transition: .4s;
+			}
+
+
+			.col ul li a:hover{
+				color: #fff;
+				transform: translateX(-12px);
+			}
+
+			.col .social{
+				width: 220px;
+				display: flex;
+				align-items: center;
+				justify-content: spacc-between;
+			}
+
+			.col .social a img{
+				height: 40px;
+				width: 40px;
+				background: #fff;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				transition: .4s;
+				margin-right: 10px;
+			}
+
+			.col .social a img:hover{
+				transform: scale(1.2);
+			}
+
+			.col form input{
+				width: 400px;
+				height: 45px;
+				border-radius: 4px;
+				text-align: center;
+				margin-top: 5px;
+				margin-bottom: 20px;
+				outline: none;
+				border: none;
+			}
+
+			.col form button{
+				background: #DC143C;
+				border:transparent;
+				color: #fff;
+				border-radius: 30px;
+				padding: 10px 30px;
+				font-size: 13px;
+				cursor: pointer;
+				margin-left: 150px;
+			}
+
+			/*IF WEBSITE IS SHRUNKEN DOWN MAY LALABAS NA HAMBURGER ICON*/
+			#check{
+				display: none;
+			}
+			.checkbtn{
+				font-size: 30px;
+				color: white;
+				float: right;
+				line-height: 50px;
+				display: none;
+			}
+
+
+			@media screen and (max-width: 991px){
+				
+				.checkbtn{
+					display: block;
+					padding-left: 14em;
+				}
+				label.name{
+					font-size: 35px;
+				}
+				ul{
+					position: fixed;
+					width: 100%;
+					height: 100vh;
+					background: #F8F8FF;
+					top: 120px;
+					left: -100%;
+					text-align: center;
+					transition: all .5s;
+					z-index: 3;
+				}
+				nav ul li{
+					display: block;
+				}
+				nav ul li a{
+					font-size: 25px;
+					text-align: center;
+					padding-left: 5.5rem;
+				}
+				a:hover, a.active{
+					background: none;
+					color: brown;
+				}
+				#check:checked ~ ul {
+					left: 0;
+				}
+
+				.contact{
+					padding: 50px;
+				}
+
+				.container{
+					flex-direction: column;
+				}
+
+				.container .contactInfo{
+					margin-bottom: 40px;
+				}
+
+				.container .contactInfo 
+				{
+					width: 100%;
+				}
+
+				.contactForm{
+					width: 100%;
+				}
+
+			}
+
+			@media screen and (max-width: 600px){
+				.checkbtn{
+					display: block;
+					padding-left: 50px;
+				}
+				label.name{
+					font-size: 35px;
+				}
+				ul{
+					position: fixed;
+					width: 100%;
+					height: 100vh;
+					background: #F8F8FF;
+					top: 120px;
+					left: -100%;
+					text-align: center;
+					transition: all .5s;
+					z-index: 3;
+
+				}
+				nav ul li{
+					display: block;
+
+				}
+				nav ul li a{
+					font-size: 25px;
+					text-align: center;
+					padding-left: 5.5rem;
+				}
+				a:hover, a.active{
+					background: none;
+					color: brown;
+				}
+				#check:checked ~ ul {
+					left: 0;
+
+				}
+				
+			}
+
+	</style>
+</head>
+<body>
+
+	<nav>
+		<div class="logoContent">
+			<a href="#" class="logo"><img src ="cake ball.png"></a>
+		<label class="name">Cake Ball Paradise</label>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<ul class = "ribbon">
+			<li style="margin-left: 17em;"><a href="index.html">Home</a></li>
+			<li><a href="Menu.html">Menu</a></li>
+			<li><a href="Recipes.html">Recipes</a></li>
+			<li><a href="AboutUs.html">About Us</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-------------- start------------------------>
+	<section class="contact">
+		<div class="content">
+			<h2>Contact Us</h2>
+			<p>Thank you for choosing Cake Ball Paradise, where we specialize in creating delicious, beautiful, and customizable cake balls for every occasion. Follow us on social media to stay up-to-date on our latest flavors and designs.</p>
+
+		</div>
+		<div class="container">
+			<div class="contactInfo">
+				<div class="box">
+					<div class="icon">
+						<i class="fas fa-map-marker-alt"></i>
+					</div>
+					<div class="text">
+						<h3>Address</h3>
+						<p>12 Alcalde Jose St. Kapasigan, Pasig 1600</p>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="icon">
+						<i class="fas fa-phone-alt"></i>
+					</div>
+					<div class="text">
+						<h3>Phone</h3>
+						<p>5467-8934</p>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="icon">
+						<i class="far fa-envelope"></i>
+					</div>
+					<div class="text">
+						<h3>Email</h3>
+						<p>cakeballparadise@gmail.com</p>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="icon">
+						<i class="fab fa-facebook"></i>
+					</div>
+					<div class="text">
+						<h3>Facebook</h3>
+						<p>Cake Ball Paradise</p>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="icon">
+						<i class="fab fa-instagram-square"></i>
+					</div>
+					<div class="text">
+						<h3>Instagram & Twitter</h3>
+						<p>@CakeBallParadisePasig</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="contactForm">
+				<form action="https://formspree.io/f/xbjeelqo" method="POST">
+					<h2>Send Message</h2>
+					<div class="inputBox">
+						<input type="text" name="name" required="required">
+						<span>Full Name</span>
+					</div>
+
+					<div class="inputBox">
+						<input type="email" name="email" required="required">
+						<span>Email</span>
+					</div>
+
+					<div class="inputBox">
+						<textarea required="required" name="msg"></textarea>
+						<span>Type your Message...</span>
+					</div>
+
+					<div class="inputBox">
+						<button type="submit">Send</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!------ footer -------------------->
+	<div class="footer">
+    		<div class="main">
+    		
+    			<div class="col">
+    				<h4>Contact Us</h4>
+    					<div class="social">
+    						<a href="https://www.facebook.com/profile.php?id=100092992712685" target="_blank"><img src="fb.png"></a>
+    						<!--<a href="#"><img src="twt.png"></a>
+    						<a href="#"><img src="ins.png"></a>-->
+    					</div>
+    			</div>
+
+    			<div class="col">
+    				<h4>Send us a Message</h4>
+					<form action="https://formspree.io/f/xbjeelqo" method="POST">
+						<input type="text" placeholder="Send Message" required><br>
+						<button type="submit">Submit</button>
+					</form>
+    			</div>
+
+
+    		</div>
+    </div>
+
+   
+
+</body>
+</html>

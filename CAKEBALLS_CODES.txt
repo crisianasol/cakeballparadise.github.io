@@ -1,0 +1,420 @@
+INDEX.HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content ="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cake Pop Website</title>
+
+	<link 
+	rel="stylesheet" 
+	href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<nav>
+		<div class="logoContent">
+			<a href="#" class="logo"><img src ="cake ball.png"></a>
+		<label class="name">Cake Ball Paradise</label>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="#">Recipes</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<section class="home" id="home">
+		<div class="homeContent">
+			<h2>A special treat for the special someone.</h2>
+			<p>You can't buy happiness but you can buy cake pop and that's kind of the same thing.</p>
+		</div>
+
+	</section>
+	<section class="recipes" id="recipes">
+		<div class="heading">
+			<h2>Our Exlusive Menus are here</h2>
+		</div>
+		<div class="swiper recipes-row">
+			<div class="swiper-wrapper">
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="chocolate.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Chocolate</h3>
+					<p>Mesherep</p>
+				</div>
+			</div>
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="cream-o.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Cream-O</h3>
+					<p>Mesherep</p>
+				</div>
+			</div>
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="sprinkles.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Sprinkles</h3>
+					<p>Mesherep</p>
+				</div>
+			</div>
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="vanilla.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Vanilla</h3>
+					<p>Mesherep</p>
+				</div>
+				</div>
+		    <div class="swiper-pagination"></div>
+	    </div>
+	    <div class="swiper recipes-row">
+			<div class="swiper-wrapper">
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="mocha.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Mocha</h3>
+					<p>Mesherep</p>
+				</div>
+			</div>
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="graham.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Graham</h3>
+					<p>Mesherep</p>
+				</div>
+			</div>
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="strawberry.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Strawberry</h3>
+					<p>Mesherep</p>
+				</div>
+			</div>
+			<div class=" swiper-slide box">
+				<div class="img">
+					<img src="red velvet.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Red Velvet</h3>
+					<p>Mesherep</p>
+			    </div>
+		    </div>
+		<div class="swiper-pagination"></div>
+	    </div>
+    </section>
+
+    <section class="about" id="about">
+    	
+    	<div class="about-row">
+    		<div class="box">
+    			<div class="img">
+    				<img src="us.jpg" alt="">
+    			</div>
+    			<div class="content">
+    				<h3>About Us</h3>
+    				<p>Hello everyone! By the way, we are second-year college students enrolled in the Bachelor of Science in Information Technology 
+program at the Pamantasan ng Lungsod ng Pasig City. There are five people in this group, which is Ma. Leah Delgado, Crisia Nasol, Hesper 
+Evangelista, Macoy Pereye, and Realika Nazareta are also present. The website we created is about cake balls, and the five of
+us worked together to create both of them as well as this website. So, if you're looking for inspiration on how to begin 
+creating cake balls, you've come to the perfect place. Thank you very much for visiting our website and may it be of use to 
+you!</p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script src="index.js"></script>
+</body>
+</html>
+
+
+STYLES.CSS
+
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body{
+	font-family: montserrat;
+}
+nav{
+	top: 0; right: 0; left: 0;
+	background: #FFB6C1;
+	height: 8rem;
+	width: 100%;
+}
+label.name{
+	color: #900603;
+	font-size: 38px;
+	font-weight: bolder;
+	font-family: Monotype Corsiva;
+	padding-right: 3rem;
+	padding-bottom: 1rem;
+	margin-left: 1rem;
+}
+nav .logoContent {
+	display: flex;
+	align-items: center;
+}
+nav .logo img{
+	positon: absolute;
+	height: 9rem;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a{
+	font-size: 25px;
+	font-family: 'Georgia', sans-serif;
+	color: 	#DC143C;
+	font-weight: normal;
+	margin-right: 3rem;
+	padding-right: 3rem;
+	padding-left: .5rem;
+}
+a.active, a:hover{
+	color: #FF4500;
+}
+#check{
+	display: none;
+}
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 50px;
+	display: none;
+}
+.home {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	background: url(bg.jpg) no-repeat;
+	height: 50px;
+	background-size: cover;
+	background-position: center center;
+}
+.home .homeContent{
+	width: 50%;
+	float: left;
+	text-align: bolder;
+}
+.home .homeContent h2{
+	font-size: 5rem;
+	font-weight: bolder;
+	color: #CD5C5C;
+	margin-bottom: 3rem;
+	line-height: 7rem;
+	text-shadow: var(--box-shadow);
+}
+.home .homeContent p{
+	font-size: 20px;
+	color: #8B0000;
+}
+
+@media (max-width: 991){
+	label.name{
+		font-size: 30px;
+		padding-left: 2px;
+		padding-right: 2px;
+		
+	}
+	nav ul li a{
+		font-size: 17px;
+		padding-left: 5px;
+		padding-right: 5px;
+		text-align: center;
+	}
+	.home .homeContent{
+		margin-left: 0;
+		width: 80%;
+	}
+	.home .homeContent h2{
+		font-size: 20px;
+	}
+}
+@media (max-width: 600px){
+	.checkbtn{
+		display: block;
+		padding-left: 50px;
+	}
+	label.name{
+		font-size: 35px;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #F8F8FF;
+		top: 120px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+	}
+	nav ul li a{
+		font-size: 25px;
+		text-align: center;
+		padding-left: 5.5rem;
+	}
+	a:hover, a.active{
+		background: none;
+		color: brown;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+	.home .homeContent{
+		margin-left: 0;
+		width: 65%;
+	}
+	.home .homeContent h2{
+		font-size: 80px;
+	}
+}
+section{
+	padding: 1rem 2%;
+}
+.heading{
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2px;
+	color: black;
+}
+.recipes .row{
+	margin-bottom: 5rem;
+	display: flex;
+	align-items: center;
+}
+.recipes .recipes-row{
+	margin-top: 2rem;
+}
+.recipes .recipes-row .box{
+	display: flex;
+	flex-direction: column;
+	width: 30em;
+	height: 19rem;
+	background-color: #fff0f5;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	border-radius: 5rem;
+}
+.recipes .recipes-row .img img{
+	height: 12rem;
+	width: 12rem;
+	padding-top: 15px;
+}
+.recipes .recipes-row .img img:hover{
+	transform: scale(1.1);
+}
+.recipes .recipes-row .content{
+	padding-bottom: 2rem;
+}
+.recipes .recipes-row .content h3{
+	font-size: 1.5rem;
+	color: Black;
+}
+.recipes .recipes-row .content p{
+	font-size: 1rem;
+	color: black;
+}
+
+.swiper-pagination-bullet{
+	background-color: var(--black);
+}
+.about{
+	background: url(bg2.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.about .about-row .box{
+	display: flex;
+	align-items: center;
+	background: var(black);
+	flex: wrap;
+}
+.about .about-row .img{
+	flex: 1 1 45rem;
+}
+.about .about-row .img img{
+	width: 110%;
+	padding: 3rem;
+	margin-left: 21rem;
+	margin-bottom: 25rem;
+}
+.about .about-row .content{
+	flex: 1 1 45rem;
+	padding: 2rem;
+	padding-left: 7rem;
+}
+.about .about-row .content h3{
+	font-size: 5rem;
+	font-family: 'arial' sans-serif;
+	color: var(--black);
+}
+.about .about-row .content p{
+	font-size: 1.6rem;
+	color: var(--black);
+	padding: 1rem 0;
+}
+
+INDEX.JS(JAVASCRIPT)
+var swiper = new Swiper(".recipes-row", {
+      spaceBetween: 20,
+      autoplay:{
+        delay: 9000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });

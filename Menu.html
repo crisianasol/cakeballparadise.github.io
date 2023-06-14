@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cake Ball Paradise</title>
+	<link rel="icon" type="image/x-icon" href="ckfavicon.png">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+			*{
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				list-style: none;
+				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
+
+			}
+
+			body{
+				font-family: 'Poppins', sans-serif;
+				background: url(hmcont5.jpg) no-repeat;
+				background-attachment: fixed;
+				background-size: 100% 100%;
+			}
+
+			nav{
+				top: 0; right: 0; left: 0;
+				background: #FFB6C1;
+				height: 8rem;
+				width: 100%;
+			}
+
+			label.name{
+				color: #900603;
+				font-size: 38px;
+				font-weight: bolder;
+				font-family: Monotype Corsiva;
+				padding-right: 3rem;
+				padding-bottom: 1rem;
+				margin-left: 1rem;
+			}
+
+			nav .logoContent {
+				display: flex;
+				align-items: center;
+			}
+
+			nav .logo img{
+				positon: absolute;
+				height: 9rem;
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+			}
+
+			nav ul li{
+				list-style: none;
+				line-height: 80px;
+				display: inline-block;
+			}
+
+
+			/*RIBBON*/
+			nav ul li a{
+				display: inline-block;
+				font-size: 25px;
+				color: 	#DC143C;
+				font-weight: 400;
+				text-decoration: none ;
+				margin-left: 50px;
+				
+			}
+
+			a.active, a:hover{
+				color: #FFFFFF;
+			}
+
+			/*IF WEBSITE IS SHRUNKEN DOWN MAY LALABAS NA HAMBURGER ICON*/
+			#check{
+				display: none;
+			}
+			.checkbtn{
+				font-size: 30px;
+				color: white;
+				float: right;
+				line-height: 50px;
+				display: none;
+			}
+
+
+
+			/*=========================NEW AREA=======================*/
+
+			.wrapper{
+				width: 1300px;
+				margin: 100px auto;
+				background: rgba(249, 247, 249, 0.8);
+				padding: 2rem;
+				border: 1px solid #DC143C;
+				border-radius: 5rem;
+
+			}
+
+			.title{
+				text-align: center;
+				margin-bottom: 60px;
+			}
+
+			.title h4{
+				text-transform: capitalize;
+				font-size: 55px;
+				position: relative;
+				display: inline-block;
+				padding-bottom: 10px;
+			}
+
+			.title h4 span{
+				display: block;
+				font-size: 20px;
+				font-style: italic;
+				font-weight: 400;
+				margin-bottom: -10px;
+			}
+
+			.title h4:before{
+				position: absolute;
+				content: "";
+				width: 100px;
+				height: 2px;
+				background-color: #DC143C;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+
+			}
+
+			.menu{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			.single-menu{
+				flex-basis: 580px;
+				margin-bottom: 40px;
+				padding-bottom: 40px;
+				border-bottom: 1px solid #ddd;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-right: 12px;
+			}
+
+			.single-menu:nth-child(5), .single-menu:nth-child(6){
+				border-bottom: 0;
+			}
+
+			.single-menu img{
+				max-width: 200px;
+				margin-right: 30px;
+				border-radius: 50%;
+				border: 1px solid #B44C9E;
+				padding: 5px;
+			}
+
+			.single-menu h4{
+				text-transform: capitalize;
+				font-size: 22px;
+				border-bottom: 1px dashed #333;
+				margin-bottom: 5px;
+				padding-bottom: 5px;
+			}
+
+			.single-menu h4 span{
+				float: right;
+				color: #DC143C;
+				font-style: italic;
+			}
+
+			.single-menu p{
+				text-align: justify;
+  				text-justify: inter-word;
+			}
+
+
+
+			#myBtn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				font-size: 14px;
+				border: none;
+				outline: none;
+				background-color: #CD5C5C;
+				color: #fff;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 5px;
+			}
+
+			#myBtn:hover {
+				background-color: #fff;
+				color: #CD5C5C;
+				border: 1px solid #CD5C5C;
+			}
+
+
+
+			/*FOOTER DESIGN*/
+			.main{
+				display: flex;
+				flex-wrap: wrap;
+				margin-left: 10em;
+				padding: 25px;
+
+			}
+
+			.footer{
+				padding: 10px 0;
+				background-color: #FFB6C1;
+			}
+
+
+			.col{
+				width: 25%;
+			}
+
+			.col h4{
+				font-size: 1.2rem;
+				color: #DC143C;
+				margin-bottom: 25px;
+				position: relative;
+			}
+
+			.col h4::before{
+				content: "";
+				position: absolute;
+				height: 2px;
+				width: 50px;
+				left: 0;
+				bottom: -8px;
+				background: #fff;
+			}
+
+			.col ul li:not(last-child){
+				margin-bottom: 15px;
+			}
+
+			.col ul li a{
+				color: #DC143C;
+				font-size: 1.1rem;
+				display: block;
+				text-transform: capitalize;
+				transition: .4s;
+			}
+
+
+			.col ul li a:hover{
+				color: #fff;
+				transform: translateX(-12px);
+			}
+
+			.col .social{
+				width: 220px;
+				display: flex;
+				align-items: center;
+				justify-content: spacc-between;
+			}
+
+			.col .social a img{
+				height: 40px;
+				width: 40px;
+				background: #fff;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				transition: .4s;
+				margin-right: 10px;
+			}
+
+			.col .social a img:hover{
+				transform: scale(1.2);
+			}
+
+			.col form input{
+				width: 400px;
+				height: 45px;
+				border-radius: 4px;
+				text-align: center;
+				margin-top: 5px;
+				margin-bottom: 20px;
+				outline: none;
+				border: none;
+			}
+
+			.col form button{
+				background: #DC143C;
+				border:transparent;
+				color: #fff;
+				border-radius: 30px;
+				padding: 10px 30px;
+				font-size: 13px;
+				cursor: pointer;
+				margin-left: 150px;
+			}
+
+			.Receipt{
+				width: 800px;
+				margin: 100px auto;
+				background: url(receipt3.jpg) no-repeat;
+				background-size: cover;
+				background-position: center	 center;
+				padding-top: 8rem;
+				padding-bottom: 8rem;
+				border: 1px dashed #DC143C;
+
+			}
+
+			.Receipt h1{
+				text-align: center;
+				font-size: 25px;
+				font-weight: 400;
+
+			}
+
+			.Receipt .rec-container{
+				display: flex;
+			    justify-content: center;
+			    align-items: flex-start;
+			    gap: 20px;
+			    margin-top: 30px;
+			    border-radius: 7px;
+			}
+
+			.Receipt .rec-box{
+				width: 700px;
+			    padding: 20px;
+			    background-color: #f5f5f5;
+			    border-radius: 7px;
+			    border: 1px solid #DC143C;
+			    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+
+			.Receipt .rec-box h2{
+				text-align: center;
+			}
+
+			.Receipt .rec-box hr{
+				width: 50%;
+				border: 1px solid #DC143C;
+				margin-left: 25%;
+				margin-right: 25%;
+			}
+
+			.Receipt .rec-box th{
+				text-align: right;
+				padding-bottom: 1.5rem;
+				padding-right: 10px;
+			}
+
+			.Receipt .rec-box td{
+				padding-bottom: 1.5rem;
+			}
+
+			.Receipt .rec-box select{
+				padding: 3px;
+				width: 300px;
+				border-radius: 6px;
+			}
+
+			.Receipt .rec-box input[type=button]{
+				margin-top: 15px;
+				padding: 10px;
+				background-color: #C03E58;
+				color: #fff;
+				border: transparent;
+				border-radius: 6px;
+			}
+
+			.Receipt .rec-box input[type=number]{
+				padding: 3px;
+				width: 300px;
+				border-radius: 6px;
+			}
+
+			.Receipt .rec-box input[type=button]:hover{
+				background-color:  #fff;
+				color: #C03E58;
+				border: .5px solid #C03E58;
+			}
+
+			.Receipt .rec-box .end{
+				margin-left: 100px;
+
+			}
+
+			.Receipt .rec-box .end .total h3{
+				text-align: right;
+			}
+
+			.Receipt .rec-box .end .Total p, .Receipt .rec-box .end .Total h3{
+				margin-right: 100px;
+				text-align: right;
+				color: #C03E58;
+			}
+
+			.checkoutbtn button{
+				margin-top: 20px;
+				padding: 10px;
+				background-color: #8A1F34;
+				color: #fff;
+				width: 550px;
+				border: transparent;
+				border-radius: 6px;
+				font-weight: 600;
+			}
+
+			.checkoutbtn button:hover{
+				background-color: #C03E58;
+				color: #fff;
+			}
+
+			
+			
+			.form-popup {
+			  display: none;
+			  border: 3px solid #f1f1f1;
+			  z-index: 9;
+			}
+
+			.form-container {
+			  max-width: 300px;
+			  padding: 10px;
+			  background-color: white;
+			}
+
+			.form-container h1{
+				font-weight: 600;
+			}
+
+			.form-container label{
+				font-weight: 500;
+			}
+			
+			.form-container input[type=text], .form-container input[type=password] {
+			  width: 100%;
+			  padding: 15px;
+			  margin: 5px 0 22px 0;
+			  border: none;
+			  background: #f1f1f1;
+
+			}
+
+			
+			.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+			  background-color: #ddd;
+			  outline: none;
+			}
+
+			
+			.form-container .btn {
+			  background-color: #04AA6D;
+			  color: white;
+			  padding: 10px 20px;
+			  border: none;
+			  cursor: pointer;
+			  margin-bottom: 3px;
+			  width: 100%;
+			  opacity: 0.8;
+			}
+
+			
+			.form-container .cancel {
+			  background-color: red;
+			}
+
+			
+			.form-container .btn:hover, .open-button:hover {
+			  opacity: 1;
+			}
+
+		
+			.slideshow-container {
+			  max-width: 150px;
+			  position: relative;
+			  margin: auto;
+			}
+
+			.prev, .next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 116%;
+			  background-color: #900603;
+			  color: #fff;
+			  width: auto;
+			  padding-left: 7px;
+			  padding-right: 7px;
+			  padding-top: 2px;
+			  padding-bottom: 2px;
+			  margin-top: -22px;
+			  font-weight: bold;
+			  font-size: 9px;
+			  transition: 0.2s ease;
+			  border-radius: 5px;
+			  user-select: none;
+
+			}
+
+			.next {
+			  right: 0;
+			  border-radius: 3px 0 0 3px;
+			}
+
+			.prev:hover, .next:hover {
+			  background-color: rgba(0,0,0,0.8);
+			  color: #fff;
+			}
+
+			
+			.text {
+			  font-size: 15px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 150px;
+			  width: 100%;
+			  text-align: center;
+			}
+
+	
+			/*========================================================================================================================*/
+
+			@media screen and (max-width: 991px){
+				
+				.checkbtn{
+					display: block;
+					padding-left: 14em;
+				}
+				label.name{
+					font-size: 35px;
+				}
+				ul{
+					position: fixed;
+					width: 100%;
+					height: 100vh;
+					background: #F8F8FF;
+					top: 120px;
+					left: -100%;
+					text-align: center;
+					transition: all .5s;
+					z-index: 3;
+				}
+				nav ul li{
+					display: block;
+				}
+				nav ul li a{
+					font-size: 25px;
+					text-align: center;
+					padding-left: 5.5rem;
+				}
+				a:hover, a.active{
+					background: none;
+					color: brown;
+				}
+				#check:checked ~ ul {
+					left: 0;
+				}
+
+			}
+
+			@media screen and (max-width: 600px){
+				.checkbtn{
+					display: block;
+					padding-left: 50px;
+				}
+				label.name{
+					font-size: 35px;
+				}
+				ul{
+					position: fixed;
+					width: 100%;
+					height: 100vh;
+					background: #F8F8FF;
+					top: 120px;
+					left: -100%;
+					text-align: center;
+					transition: all .5s;
+					z-index: 3;
+				}
+				nav ul li{
+					display: block;
+				}
+				nav ul li a{
+					font-size: 25px;
+					text-align: center;
+					padding-left: 5.5rem;
+				}
+				a:hover, a.active{
+					background: none;
+					color: brown;
+				}
+				#check:checked ~ ul {
+					left: 0;
+				}
+				
+			}
+
+	</style>
+</head>
+<body>
+
+	<nav>
+		<div class="logoContent">
+			<a href="#" class="logo"><img src ="cake ball.png"></a>
+		<label class="name">Cake Ball Paradise</label>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<ul class = "ribbon">
+			<li style="margin-left: 17em;"><a href="index.html">Home</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="Recipes.html">Recipes</a></li>
+			<li><a href="AboutUs.html">About Us</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!----------------- NEW AREA -------------------------->
+
+	<div class="wrapper">
+		<div class="title">
+			<h4><span>A Delectable treat in every bite</span>Our Menu</h4>
+		</div>
+		<div class="menu">
+			<div class="single-menu">
+				<img src="chocolate.png">
+				<div class="menu-content">
+					<h4>Chocolate <span>₱ 5.00</span></h4>
+					<p>A chocolate cake ball coated with white chocolate drizzle for a rich and indulgent treat.</p>
+				</div>
+			</div>
+
+			<div class="single-menu">
+				<img src="cream-o.png">
+				<div class="menu-content">
+					<h4>Cream-O <span>₱ 7.00</span></h4>
+					<p>Enjoy a Cookies and Cream cake ball covered in creamy frosting and marshmallow for a deliciously sweet experience.</p>
+				</div>
+			</div>
+
+			<div class="single-menu">
+				<img src="graham.png">
+				<div class="menu-content">
+					<h4>Graham <span>₱ 10.00</span></h4>
+					<p>Satisfy your cravings with a Smore's cake ball covered in crushed graham cracker and marshmallow for a classic campfire flavor.</p>
+				</div>
+			</div>
+
+			<div class="single-menu">
+				<img src="mocha.png">
+				<div class="menu-content">
+					<h4>Mocha <span>₱ 10.00</span></h4>
+					<p>A mocha flavored cake ball topped with white chocolate and crushed cream o, perfect for coffee lovers.</p>
+				</div>
+			</div>
+
+			<div class="single-menu">
+				<img src="red velvet.png">
+				<div class="menu-content">
+					<h4>Red Velvet <span>₱ 10.00</span></h4>
+					<p>Treat yourself to a Red Velvet cake ball topped with red chocolate, white sprinkles, and marshmallow for a colorful and flavorful delight.</p>
+				</div>
+			</div>
+
+			<div class="single-menu">
+				<img src="sprinkles.png">
+				<div class="menu-content">
+					<h4>Sprinkles <span>₱ 10.00</span></h4>
+					<p>A chocolate cake ball topped with colorful sprinkles, adding a fun and playful touch to this classic dessert.</p>
+				
+				</div>
+			</div>
+
+			<div class="single-menu">
+				<img src="strawberry.png">
+				<div class="menu-content">
+					<h4>Strawberry <span>₱ 10.00</span></h4>
+					<p>Indulge in a Strawberry Vanilla flavored cake ball covered with red chocolate and white sprinkles for a sweet and fruity experience.</p>
+					
+				</div>
+			</div>
+
+			<div class="single-menu">
+				<img src="vanilla.png">
+				<div class="menu-content">
+					<h4>Vanilla <span>₱ 10.00</span></h4>
+					<p>A Vanilla cake flavored cake ball covered with white chocolate and white and red sprinkles, a perfect treat for any occasion.</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--------------- receipt area ----------------------->
+
+	<div class="Receipt">
+
+	  <div class="rec-container">
+	    <div class="rec-box">
+	      <h2>Order Form</h2><hr><br>
+
+
+	      <form id="receiptForm">
+	      	<center>
+	        <table>
+	          <tr>
+	            <th>Item Name: </th>
+	            <td>
+	              <div class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <img src="chocolate.png" style="width:100%">
+					  <div class="text">Chocolate</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="cream-o.png" style="width:100%">
+					  <div class="text">Cream-O</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="graham.png" style="width:100%">
+					  <div class="text">Graham</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="mocha.png" style="width:100%">
+					  <div class="text">Mocha</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="red velvet.png" style="width:100%">
+					  <div class="text">Red Velvet</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="sprinkles.png" style="width:100%">
+					  <div class="text">Sprinkles</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="strawberry.png" style="width:100%">
+					  <div class="text">Strawberry</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="vanilla.png" style="width:100%">
+					  <div class="text">Vanilla</div>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+
+					</div>
+					<br><br>
+
+	              <div class="dropdown">
+                        <select name="cakeball" id="itemName" onchange="updatePrice()">
+                        	 <option selected>-Choose Flavor-</option>
+                             <option value="Chocolate" data-price="5.00" >Chocolate</option>
+                             <option value="Cream-O" data-price="7.00" >Cream-O</option>
+                             <option value="Graham" data-price="10.00" >Graham</option>
+                             <option value="Mocha" data-price="10.00" >Mocha</option>
+                             <option value="Red Velvet" data-price="10.00" >Red Velvet</option>
+                             <option value="Sprinkles" data-price="10.00" >Sprinkles</option>
+                             <option value="Strawberry" data-price="10.00" >Strawberry</option>
+                             <option value="Vanilla" data-price="10.00" >Vanilla</option>
+                         </select>
+                           
+                   </div>
+	            </td>
+	          </tr>
+
+	          <tr>
+	            <th>Item Price: </th>
+	            <td>
+	              <p id="itemPrice"></p>
+	            </td>
+	          </tr>
+
+	          <tr>
+	              <th>Quantity:</th>
+	              <td>
+	                <input type="number" id="quantity" value="0" min="1" step="1">
+	              </td>
+              </tr>
+
+	          <tr>
+	            <th></th>
+	            <td>
+	              <input type="button" value="Add Item" onclick="addItemToReceipt()">
+	              <input type="button" value="Clear Cart" id="clearButton">
+	            </td>
+	          </tr>
+	        </table>
+	        </center>
+	      </form>
+
+	      <center> <p>-----------------------------------------------------</p></center>
+	     
+
+	      <div class="end">
+		      <h3>Items</h3>
+		      <ul id="itemList"></ul>
+
+		      <br><br>
+
+		      <div class="Total">
+		        <h3>Total: </h3>
+		        <p id="total"></p>
+		      </div>
+	      </div>
+
+	    </div>
+	  </div>
+
+	  <center>
+	      <div class="checkoutbtn">
+	      	<button class="open-button" onclick="openForm()">CHECK OUT</button>
+	      </div>
+	  </center>
+
+	</div>
+
+	<center>
+		<div class="form-popup" id="myForm">
+	      	  <form class="form-container">
+	      	    <h1>Login</h1><br>
+
+	      	    <label for="name"><b>Name</b></label>
+	      	    <input type="text" placeholder="Enter Name" name="name" id="name" value="" required>
+
+	      	    <label for="psw"><b>Password</b></label>
+	      	    <input type="password" placeholder="Enter Password" name="psw" required>
+
+	      	    <button type="submit" class="btn" onclick="Welcome()">Login</button>
+	      	    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+	      	  </form>
+	      	</div>
+	</center>
+
+	<br><br>
+			
+
+	<!------ footer -------------------->
+	<div class="footer">
+    		<div class="main">
+
+    			<div class="col">
+    				<h4>Contact Us</h4>
+    					<div class="social">
+    						<a href="https://www.facebook.com/profile.php?id=100092992712685" target="_blank"><img src="fb.png"></a>
+    						<!--<a href="#"><img src="twt.png"></a>
+    						<a href="#"><img src="ins.png"></a>-->
+    					</div>
+    			</div>
+
+    			<div class="col">
+    				<h4>Send us a Message</h4>
+					<form action="https://formspree.io/f/xbjeelqo" method="POST">
+						<input type="text" placeholder="Send Message" required><br>
+						<button type="submit">Submit</button>
+					</form>
+    			</div>
+
+
+    		</div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    	Back to Top 
+    </button>
+
+    <script type="text/javascript">
+    	let mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+
+		//========================== Receipt code
+
+		var receipt = {
+		  items: [],
+		  addItem: function(itemName, itemPrice) {
+		    this.items.push({ name: itemName, price: itemPrice });
+		  },
+
+		  calculateTotal: function() {
+		    var total = 0;
+		    for (var i = 0; i < this.items.length; i++) {
+		      total += this.items[i].price;
+		    }
+		    return total.toFixed(2);
+		  },
+
+		  displayReceipt: function() {
+		    var itemList = document.getElementById("itemList");
+		    itemList.innerHTML = ""; 
+
+		    for (var i = 0; i < this.items.length; i++) {
+		      var listItem = document.createElement("li");
+		      listItem.innerText = this.items[i].name + ": ₱" + this.items[i].price.toFixed(2);
+		      itemList.appendChild(listItem);
+		    }
+
+		    var totalElement = document.getElementById("total");
+		    totalElement.innerText = "₱ " + this.calculateTotal();
+		  },
+
+		  clearReceipt: function() {
+		    this.items = []; 
+		    this.displayReceipt(); 
+		  }
+
+		};
+
+		function updatePrice() {
+		  var itemNameInput = document.getElementById("itemName");
+		  var itemPriceElement = document.getElementById("itemPrice");
+		  var selectedOption = itemNameInput.options[itemNameInput.selectedIndex];
+
+		  var itemPrice = parseFloat(selectedOption.getAttribute("data-price"));
+		  var itemImage = selectedOption.getAttribute("data-image");
+		  itemPriceElement.innerText = "₱ " + itemPrice.toFixed(2);
+
+
+		}
+
+		function addItemToReceipt() {
+		  var itemNameInput = document.getElementById("itemName");
+		  var itemPriceElement = document.getElementById("itemPrice");
+		  var quantityInput = document.getElementById("quantity");
+		  
+
+		  var itemName = itemNameInput.value;
+		  var itemPrice = parseFloat(itemPriceElement.innerText.substr(2));
+		  var quantity = parseInt(quantityInput.value);
+
+
+		  itemPrice *= quantity; 
+		  receipt.addItem(itemName, itemPrice);
+		  receipt.displayReceipt();
+
+		  itemNameInput.value = "";
+		  itemPriceElement.innerText = "";
+		  quantityInput.value = 0; 
+		}
+
+		var clearButton = document.getElementById("clearButton");
+
+		clearButton.addEventListener("click", function() {
+		  receipt.clearReceipt();
+		 
+		});
+
+
+		function openForm() {
+		  document.getElementById("myForm").style.display = "block";
+		 
+		}
+
+		function closeForm() {
+		  document.getElementById("myForm").style.display = "none";
+		}
+
+		function Welcome(){
+			alert("Welcome User! Order now is being processed");
+		}
+
+
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		 
+		  slides[slideIndex-1].style.display = "block";  
+		  
+		}
+		
+
+    </script>
+
+</body>
+</html>

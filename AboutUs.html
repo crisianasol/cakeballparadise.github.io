@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cake Ball Paradise</title>
+	<link rel="icon" type="image/x-icon" href="ckfavicon.png">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+			*{
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				list-style: none;
+				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
+
+			}
+
+			body{
+				font-family: 'Poppins', sans-serif;
+				background: url(AboutUsbg.jpg) no-repeat;
+				background-attachment: fixed;
+				background-size: 100% 100%;
+			}
+
+			nav{
+				top: 0; right: 0; left: 0;
+				background: #FFB6C1;
+				height: 8rem;
+				width: 100%;
+			}
+
+			label.name{
+				color: #900603;
+				font-size: 38px;
+				font-weight: bolder;
+				font-family: Monotype Corsiva;
+				padding-right: 3rem;
+				padding-bottom: 1rem;
+				margin-left: 1rem;
+			}
+
+			nav .logoContent {
+				display: flex;
+				align-items: center;
+			}
+
+			nav .logo img{
+				positon: absolute;
+				height: 9rem;
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+			}
+
+			nav ul li{
+				list-style: none;
+				line-height: 80px;
+				display: inline-block;
+			}
+
+
+			/*RIBBON*/
+			nav ul li a{
+				display: inline-block;
+				font-size: 25px;
+				color: 	#DC143C;
+				font-weight: 400;
+				text-decoration: none ;
+				margin-left: 50px;
+				
+			}
+
+			a.active, a:hover{
+				color: #FFFFFF;
+			}
+
+			/*IF WEBSITE IS SHRUNKEN DOWN MAY LALABAS NA HAMBURGER ICON*/
+			#check{
+				display: none;
+			}
+			.checkbtn{
+				font-size: 30px;
+				color: white;
+				float: right;
+				line-height: 50px;
+				display: none;
+			}
+
+			
+			.heading{
+				/*text-align: center;*/
+				font-size: 2rem;
+				margin-bottom: 2px;
+				margin-top: 2em;
+				color: black;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.heading h2{
+				font-weight: 500;
+				position: relative;
+				margin-bottom: 25px;
+			}
+
+			.heading h2::after{
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 4px;
+				display: block;
+				margin:0 auto;
+				background-color: #900603;
+			}
+
+			.heading p{
+				font-size: 16px;
+				margin-bottom: 35px;
+				margin-left: 18rem;
+				margin-right: 18rem;
+				text-align: center;
+				font-weight: 500;
+				color: #CD5C5C;
+
+			}
+
+			.container{
+				width: 76%;
+				margin: 0 auto;
+				padding: 10px 20px;
+			}
+
+			.about{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+
+			}
+			.about-image{
+				flex:1;
+				margin-right: 40px;
+				overflow: hidden;
+
+			}
+			.about-image img{
+				max-width: 100%;
+				height: auto;
+				display: block;
+				transition: 0.5s ease;
+			}
+			.about-image:hover img{
+				transform: scale(1.2);
+			}
+			.about-content{
+				flex: 1;
+			}
+			.about-content h2{
+				font-size: 23px;
+				margin-bottom: 15px;
+			}
+			.about-content p{
+				font-size: 18px;
+				line-height: 1.5;
+				text-align: justify;
+  				text-justify: inter-word;
+  				text-indent: 50px;
+
+			}
+
+			
+
+
+			.sub-container{
+				text-align: center;
+				max-width: 1200px;
+				margin: auto;
+				padding: 48px 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+
+			}
+
+			.teams{
+				margin: 10px;
+				padding: 22px;
+				max-width: 30%;
+				cursor: pointer;
+				transition: 0.4s;
+				box-sizing: border-box;
+			}
+
+			.teams:hover{
+				background: #ddd;
+				border-radius: 12px;
+			}
+
+			.teams img{
+				width: 200px;
+				height: 200px;
+			}
+
+			.desig{
+				font-style: italic;
+				color: #888;
+			}
+
+			.teamname{
+				padding: 12px;
+				font-weight: bold;
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+
+			.teamabout{
+				margin: 20px 0;
+				font-weight: lighter;
+				color: #4e4e4e;
+			}
+
+			.social-links{
+				margin: 14px;
+
+			}
+
+			.social-links a img{
+				display: inline-block;
+				height: 30px;
+				width: 30px;
+				transition: .4s;
+			}
+
+			.social-links a img:hover{
+				transform: scale(1.5);
+			}
+
+
+			.main{
+				display: flex;
+				flex-wrap: wrap;
+				margin-left: 10em;
+				padding: 25px;
+
+			}
+
+			#myBtn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				font-size: 14px;
+				border: none;
+				outline: none;
+				background-color: #CD5C5C;
+				color: #fff;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 5px;
+			}
+
+			#myBtn:hover {
+				background-color: #fff;
+				color: #CD5C5C;
+				border: 1px solid #CD5C5C;
+			}
+
+
+			.footer{
+				padding: 10px 0;
+				background-color: #FFB6C1;
+			}
+
+
+			.col{
+				width: 25%;
+			}
+
+			.col h4{
+				font-size: 1.2rem;
+				color: #DC143C;
+				margin-bottom: 25px;
+				position: relative;
+			}
+
+			.col h4::before{
+				content: "";
+				position: absolute;
+				height: 2px;
+				width: 50px;
+				left: 0;
+				bottom: -8px;
+				background: #fff;
+			}
+
+			.col ul li:not(last-child){
+				margin-bottom: 15px;
+			}
+
+			.col ul li a{
+				color: #DC143C;
+				font-size: 1.1rem;
+				display: block;
+				text-transform: capitalize;
+				transition: .4s;
+			}
+
+
+			.col ul li a:hover{
+				color: #fff;
+				transform: translateX(-12px);
+			}
+
+			.col .social{
+				width: 220px;
+				display: flex;
+				align-items: center;
+				justify-content: spacc-between;
+			}
+
+			.col .social a img{
+				height: 40px;
+				width: 40px;
+				background: #fff;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				transition: .4s;
+				margin-right: 10px;
+			}
+
+			.col .social a img:hover{
+				transform: scale(1.2);
+			}
+
+			.col form input{
+				width: 400px;
+				height: 45px;
+				border-radius: 4px;
+				text-align: center;
+				margin-top: 5px;
+				margin-bottom: 20px;
+				outline: none;
+				border: none;
+			}
+
+			.col form button{
+				background: #DC143C;
+				border:transparent;
+				color: #fff;
+				border-radius: 30px;
+				padding: 10px 30px;
+				font-size: 13px;
+				cursor: pointer;
+				margin-left: 150px;
+			}
+
+
+			/*FOR DESKTOP SHORTENING*/
+			@media screen and (max-width: 991px){
+				
+				.checkbtn{
+					display: block;
+					padding-left: 14em;
+				}
+				label.name{
+					font-size: 35px;
+				}
+				ul{
+					position: fixed;
+					width: 100%;
+					height: 100vh;
+					background: #F8F8FF;
+					top: 120px;
+					left: -100%;
+					text-align: center;
+					transition: all .5s;
+					z-index: 3;
+				}
+				nav ul li{
+					display: block;
+				}
+				nav ul li a{
+					font-size: 25px;
+					text-align: center;
+					padding-left: 5.5rem;
+				}
+				a:hover, a.active{
+					background: none;
+					color: brown;
+				}
+				#check:checked ~ ul {
+					left: 0;
+				}
+
+
+				.heading{
+					padding: 0px 20px;
+				}
+				.heading h1{
+					font-size: 36px;
+				}
+				.heading p{
+					font-size: 17px;
+					margin-bottom: 0px;
+				}
+				.container{
+					padding: 0px;
+				}
+				.about{
+					padding: 20px;
+					flex-direction: column;
+				}
+				.about-image{
+					margin-right: 0px;
+					margin-bottom: 20px;
+				}
+				.about-content p{
+					padding: 0px;
+					font-size: 16px;
+				}
+
+				
+			}
+
+			/*FOR DESKTOP SHORTENING*/
+			@media screen and (max-width: 600px){
+				.checkbtn{
+					display: block;
+					padding-left: 50px;
+				}
+				label.name{
+					font-size: 35px;
+				}
+				ul{
+					position: fixed;
+					width: 100%;
+					height: 100vh;
+					background: #F8F8FF;
+					top: 120px;
+					left: -100%;
+					text-align: center;
+					transition: all .5s;
+					z-index: 3;
+				}
+				nav ul li{
+					display: block;
+				}
+				nav ul li a{
+					font-size: 25px;
+					text-align: center;
+					padding-left: 5.5rem;
+				}
+				a:hover, a.active{
+					background: none;
+					color: brown;
+				}
+				#check:checked ~ ul {
+					left: 0;
+				}
+				
+			}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<div class="logoContent">
+			<a href="#" class="logo"><img src ="cake ball.png"></a>
+		<label class="name">Cake Ball Paradise</label>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<ul class = "ribbon">
+			<li style="margin-left: 17em;"><a href="index.html">Home</a></li>
+			<li><a href="Menu.html">Menu</a></li>
+			<li><a href="Recipes.html">Recipes</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<div class="heading">
+			<h2>About Us</h2>
+			<p>Cake Ball Paradise is a one-stop shop for all your dessert needs. Our bakers are dedicated to crafting delicious, hand-made cake balls that will leave you and your guests wanting more. </p>
+	</div><br><br>
+
+	<div class="container">
+		<section class="about">
+			<div class="about-image">
+				<img src="cake ball.png">
+			</div>
+			<div class="about-content">
+				<h2>A Special Treat for someone special</h2>
+				<p>Our mission is to provide you with a unique dessert that will make any occasion even more special. Whether you're celebrating a milestone birthday, a wedding, or simply want to surprise someone special, our cake balls are sure to delight you. <br><br>
+
+				At Cake Ball Paradise, we believe that quality should never be compromised, which is why we use only the finest ingredients and take pride in the care and attention that goes into every order. Our dedication to customer satisfaction ensures that every cake ball is delivered fresh and on time to your doorstep. <br><br>
+
+				So if you're looking for a special dessert that will make any occasion unforgettable, look no further than Cake Ball Paradise. Order now and experience the joy of our delicious and unique cake balls
+				<br><br>
+				Follow us on our social media channels</p><br>
+				<a href="https://www.facebook.com/profile.php?id=100092992712685" target="_blank">
+					<img src="fb.png" height="50px" width="50px">
+				</a>
+				<!--<a href="#">
+					<img src="twt.png" height="50px" width="50px">
+				</a>
+				<a href="#">
+					<img src="ins.png" height="50px" width="50px">
+				</a>-->
+			</div>
+		</section>
+	</div><br><br>
+
+	<div class="heading">
+			<h2>Meet Our Team</h2><br>
+	</div>
+
+	<div class="sub-container">
+	<div class="teams">
+		<img src="crisia.png">
+			<div class="teamname">Crisia Nasol</div>
+			<div class="desig">General Manager</div><br>
+			<div class="teamabout">Crisia is our Operations Manager, overseeing the supply chain and ensuring that every order is fulfilled with efficiency and care. His logistical expertise and customer service skills make him an invaluable member of the team.</div>
+			<div class="social-links">
+				<a href="https://www.facebook.com/crisia.nasol/" target="_blank" >
+					<img src="fb.png">
+				</a>
+				<a href="https://www.instagram.com/cjoynct/">
+					<img src="ins.png">
+				</a>
+			</div>
+	</div>
+
+	<div class="teams">
+		<img src="hesper.png">
+			<div class="teamname">Hesper Evangelista</div>
+			<div class="desig">Sous Chef & Financial Head</div><br>
+			<div class="teamabout">Hesper is the Head Baker, responsible for creating our delicious and unique cake ball flavors. Her passion for baking and creativity shines through in every order, and her attention to detail ensures that every cake ball is crafted to perfection.</div>
+			<div class="social-links">
+				<a href="https://www.facebook.com/imkawaiinee" target="_blank">
+					<img src="fb.png">
+				</a>
+				<a href="#">
+					<img src="ins.png">
+				</a>
+			</div>
+	</div>
+
+	<div class="teams">
+		<img src="mack.png">
+			<div class="teamname">Mack Pereye</div>
+			<div class="desig">Customer Service & Sales Head</div><br>
+			<div class="teamabout">Mack is our Customer Service Representative, providing exceptional support to our clients and ensuring that their needs are met. His positive attitude, passion, and attention to detail make him a key member of the Cake Ball Paradise.</div>
+			<div class="social-links">
+				<a href="https://www.facebook.com/macoy.pereye.98" target="_blank">
+					<img src="fb.png">
+				</a>
+				<a href="#">
+					<img src="ins.png">
+				</a>
+			</div>
+	</div>
+	</div>
+
+	<div class="footer">
+    		<div class="main">
+    			
+
+    			<div class="col">
+    				<h4>Contact Us</h4>
+    					<div class="social">
+    						<a href="https://www.facebook.com/profile.php?id=100092992712685" target="_blank"><img src="fb.png"></a>
+    						<!--<a href="#"><img src="twt.png"></a>
+    						<a href="#"><img src="ins.png"></a>-->
+    					</div>
+    			</div>
+
+    			<div class="col">
+    				<h4>Send us a Message</h4>
+					<form action="https://formspree.io/f/xbjeelqo" method="POST">
+						<input type="text" placeholder="Send Message" required><br>
+						<button type="submit">Submit</button>
+					</form>
+    			</div>
+
+
+    		</div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    	Back to Top 
+    </button>
+
+    <script type="text/javascript">
+    	let mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+    </script>
+
+</body>
+</html>
